@@ -1,5 +1,6 @@
 //HID Example with external USB Payloads
 // Requires: ATmega32u4 microcontroller (e.g., Arduino Micro/Leonardo), SD module, and HID support
+//Use ExampleSDPayload.txt for testing
 
 #include <Keyboard.h>    // Library to emulate keyboard input
 #include <SPI.h>         // SPI communication for SD card
