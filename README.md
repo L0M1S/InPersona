@@ -31,3 +31,9 @@ Welcome to **InPersona**, a lightweight toolkit designed to simulate **impersona
    ```bash
    git clone https://github.com/yourusername/InPersona.git
    cd InPersona
+
+---
+
+## 🔎 References
+
+- Inspired in Fare9's repo "MR_Robot_mimikatz" which helped me with a common keyboard issue in Arduino, visit his repo ([HERE](https://github.com/Fare9/MR_Robot_mimikatz))
