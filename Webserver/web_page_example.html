@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Information Submission Form</title>
+  <style>
+    /* Add styling here if needed */
+  </style>
+</head>
+<body style="background-color: #FFFFFF;">
+
+  <!-- Form that collects system and IP information -->
+  <form method="post" name="infoForm">
+    <label for="sysinfo">System Information:</label>
+    <input type="text" name="sysinfo" id="sysinfo"><br><br>
+
+    <label for="ip">IP Address:</label>
+    <input type="text" name="ip" id="ip"><br><br>
+
+    <input type="submit" value="Submit">
+    <input type="reset" value="Clear">
+  </form>
+
+  <?php
+  // Initialize variables for form inputs
+  $sysinfo = "";
+  $ip = "";
+
+  // Check if form data has been submitted and assign values
+  if (!empty($_POST['sysinfo'])) {
+      $sysinfo = trim($_POST['sysinfo']);
+  }
+
+  if (!empty($_POST['ip'])) {
+      $ip = trim($_POST['ip']);
+  }
+
+  // Create timestamp for the filename
+  $timestamp = date("Y-m-d_H-i-s");
+
+  // If data exists, write to a new text file
+  if ($sysinfo !== "" || $ip !== "") {
+      $filename = "record_" . $timestamp . ".txt";
+      $file = fopen($filename, "w");
+
+      if ($file) {
+          fwrite($file, "System Info: " . $sysinfo . PHP_EOL);
+          fwrite($file, "IP Address: " . $ip . PHP_EOL);
+          fclose($file);
+      } else {
+          echo "<p>⚠️ Unable to create log file.</p>";
+      }
+  }
+  ?>
+</body>
+</html>
